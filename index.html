@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>텀 커피하우스 Tum Coffee house | 합정 · 망원 카페</title>
+<meta name="description" content="합정역 2번 출구에서 371m, 하얀색 대문 안 작은 커피하우스. 화요일 - 일요일 12:00 - 20:00, 월요일 정기 휴무. 서울 마포구 월드컵북로1길 74 1층." />
+<link rel="canonical" href="https://tumcoffeehouse-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="텀 커피하우스 Tum Coffee house" />
+<meta property="og:title" content="텀 커피하우스 · 혼자 와도, 둘이 와도 좋아요" />
+<meta property="og:description" content="합정역 2번 출구에서 371m, 하얀색 대문 안으로 들어오시면 됩니다. 화요일 - 일요일 12:00 - 20:00." />
+<meta property="og:url" content="https://tumcoffeehouse-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://tumcoffeehouse-sample.lgt3232.workers.dev/og-tm.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = tumcoffeehouse-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "텀 커피하우스 Tum Coffee house",
+  "url": "https://tumcoffeehouse-sample.lgt3232.workers.dev/",
+  "image": "https://tumcoffeehouse-sample.lgt3232.workers.dev/og-tm.jpg",
+  "telephone": "+82-507-1367-5808",
+  "address": { "@type": "PostalAddress", "streetAddress": "월드컵북로1길 74 1층", "addressLocality": "마포구", "addressRegion": "서울특별시", "postalCode": "04031", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "20:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/tumcoffeehouse/", "https://m.place.naver.com/restaurant/2036517829/home"]
+}
+</script>
+<style>
+@font-face{ font-family:"TM Sans"; font-weight:400 700; font-display:swap; src:url("tm-pretendard.woff2") format("woff2"); }
+
+/* A' : 정돈된 뼈대(흰 바탕 · 고딕 하나 · 큰 사진) + 사장님 손그림 로고만 포인트. 색은 잉크 + 외벽 민트 하나 */
+:root{
+  --paper:#FFFFFF;
+  --paper2:#F5F5F5;
+  --ink:#1E1E1E;
+  --soft:#5C5C5C;
+  --line:#E3E3E3;
+  --mint:#DCEEE6;
+  --mint-ink:#2F6A57;
+  --r:2px;
+  --sans:"TM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:110px; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.75; font-size:16px; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, 1120px); margin-inline:auto; }
+.nw{ white-space:nowrap; }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:#FFFFFF; border-bottom:1px solid var(--line); }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:64px; }
+.brand img{ width:104px; height:auto; }
+.nav{ display:none; gap:30px; font-size:.92rem; font-weight:500; }
+.nav a{ text-decoration:none; color:var(--soft); }
+.top .btn{ min-height:40px; padding:0 16px; font-size:.86rem; }
+.snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
+.snav::-webkit-scrollbar{ display:none; }
+.snav a{ flex:0 0 auto; display:flex; align-items:center; min-height:42px; padding:0 10px; font-size:.88rem; text-decoration:none; color:var(--soft); white-space:nowrap; }
+@media (min-width:900px){ .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:72px; } }
+@media (max-width:899px){ .top .btn{ display:none; } }
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--ink); } }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:0 22px; border:1px solid var(--ink); border-radius:var(--r); text-decoration:none; font-weight:600; font-size:.94rem; background:#FFFFFF; color:var(--ink); transition:background-color .2s, color .2s, transform .1s; }
+.btn.ink{ background:var(--ink); color:#FFFFFF; }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:hover{ background:var(--ink); color:#FFFFFF; } .btn.ink:hover{ background:var(--mint-ink); border-color:var(--mint-ink); } }
+
+/* 공통 */
+.sec{ padding:96px 0; }
+.sec.alt{ background:var(--paper2); }
+.label{ display:block; font-size:.84rem; font-weight:600; color:var(--mint-ink); letter-spacing:.02em; }
+h2{ font-weight:600; font-size:clamp(1.6rem, 4.6vw, 2.3rem); line-height:1.35; letter-spacing:-.02em; margin-top:10px; }
+.lead{ color:var(--soft); margin-top:14px; max-width:36em; }
+
+/* 히어로 */
+.hero{ padding:40px 0 88px; }
+.hero-grid{ display:grid; gap:36px; }
+.hero-logo{ width:min(100%, 380px); height:auto; }
+.hero h1{ font-weight:700; font-size:clamp(1.9rem, 6vw, 3rem); line-height:1.3; letter-spacing:-.025em; margin-top:34px; }
+.hero .sub{ color:var(--soft); margin-top:12px; font-size:1.02rem; }
+.facts{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; list-style:none; font-size:.94rem; color:var(--soft); }
+.facts b{ color:var(--ink); font-weight:600; }
+.cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; }
+.cta3 .btn:first-child{ grid-column:1 / -1; }
+.hero-photo{ position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
+.hero-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+@media (min-width:640px){ .cta3{ display:flex; flex-wrap:wrap; } .hero-photo{ aspect-ratio:4/3; } }
+@media (min-width:900px){ .hero{ padding:56px 0 104px; } .hero-grid{ grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:64px; align-items:center; } }
+
+/* 소개 */
+.about-grid{ display:grid; gap:40px; margin-top:8px; }
+.quote p{ font-size:clamp(1.05rem, 2.6vw, 1.18rem); line-height:1.95; }
+.quote p + p{ margin-top:16px; }
+.quote .from{ display:block; margin-top:18px; font-size:.88rem; color:var(--soft); }
+.duo{ display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:10px; align-items:end; }
+.duo figure{ overflow:hidden; border-radius:var(--r); }
+.duo figure:first-child{ aspect-ratio:5/4; }
+.duo figure:last-child{ aspect-ratio:1/1; }
+.duo img{ width:100%; height:100%; object-fit:cover; }
+@media (min-width:900px){ .about-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:72px; align-items:center; } }
+
+/* 메뉴 */
+.beans{ display:grid; gap:14px; margin-top:40px; }
+.bean{ border:1px solid var(--line); border-radius:var(--r); padding:24px 22px; background:#FFFFFF; }
+.bean b{ display:block; font-size:1.12rem; font-weight:700; }
+.bean p{ color:var(--soft); margin-top:8px; font-size:.95rem; }
+.bean .tip{ margin-top:12px; padding-top:12px; border-top:1px solid var(--line); color:var(--ink); font-size:.92rem; }
+@media (min-width:768px){ .beans{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+.menu-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px 14px; margin-top:44px; }
+.item figure{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); background:var(--paper2); }
+.item img{ width:100%; height:100%; object-fit:cover; }
+.item h3{ font-size:1rem; font-weight:700; margin-top:12px; }
+.item p{ color:var(--soft); font-size:.9rem; margin-top:4px; line-height:1.65; }
+.item small{ display:block; color:var(--mint-ink); font-size:.8rem; font-weight:600; margin-top:6px; }
+@media (max-width:899px){ .menu-grid .item:last-child{ grid-column:1 / -1; } .menu-grid .item:last-child figure{ aspect-ratio:16/10; } }
+@media (min-width:900px){ .menu-grid{ grid-template-columns:repeat(5, minmax(0,1fr)); gap:18px; } }
+.more{ margin-top:36px; border-top:1px solid var(--ink); list-style:none; display:grid; }
+.more li{ display:grid; grid-template-columns:minmax(0,1fr); gap:2px; padding:16px 2px; border-bottom:1px solid var(--line); }
+.more b{ font-weight:600; }
+.more span{ color:var(--soft); font-size:.93rem; }
+@media (min-width:768px){ .more li{ grid-template-columns:160px minmax(0,1fr); gap:20px; } }
+.menu-note{ margin-top:22px; color:var(--soft); font-size:.92rem; }
+.menu-note a{ color:var(--ink); text-underline-offset:3px; }
+
+/* 공간: 민트 띠 */
+.space{ background:var(--mint); }
+.gallery{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:40px; }
+.gallery figure{ position:relative; overflow:hidden; border-radius:var(--r); aspect-ratio:3/4; }
+.gallery figure.tall{ grid-column:1 / -1; aspect-ratio:4/5; }
+.gallery img{ width:100%; height:100%; object-fit:cover; }
+.gallery figcaption{ position:absolute; left:10px; bottom:10px; padding:3px 9px; font-size:.8rem; font-weight:600; background:#FFFFFF; color:var(--ink); border-radius:var(--r); }
+@media (min-width:900px){ .gallery{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .gallery figure, .gallery figure.tall{ grid-column:auto; aspect-ratio:3/4; } }
+
+/* 터미 */
+.dog-grid{ display:grid; gap:12px; margin-top:40px; grid-template-columns:repeat(2, minmax(0,1fr)); }
+.dog-grid figure{ overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; }
+.dog-grid figure.wide{ grid-column:1 / -1; aspect-ratio:4/3; }
+.dog-grid img{ width:100%; height:100%; object-fit:cover; }
+@media (min-width:900px){ .dog-grid{ grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr); gap:14px; } .dog-grid figure, .dog-grid figure.wide{ grid-column:auto; aspect-ratio:auto; height:420px; } }
+
+/* 오시는 길 */
+.visit-grid{ display:grid; gap:28px; margin-top:40px; }
+.info{ border-top:1px solid var(--ink); }
+.info > div{ display:grid; grid-template-columns:84px minmax(0,1fr); gap:14px; padding:16px 0; border-bottom:1px solid var(--line); }
+.info dt{ font-weight:600; color:var(--mint-ink); font-size:.92rem; padding-top:1px; }
+.info dd small{ display:block; color:var(--soft); font-size:.88rem; margin-top:3px; }
+.info a{ text-decoration:underline; text-underline-offset:3px; }
+.notice{ margin-top:18px; padding:16px 18px; background:var(--mint); border-radius:var(--r); display:grid; gap:12px; }
+.notice p{ font-weight:500; }
+.notice .btn{ justify-self:start; min-height:44px; }
+.visit .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:22px; }
+.visit .cta .btn:first-child{ grid-column:1 / -1; }
+.map{ width:100%; height:260px; border:0; border-radius:var(--r); background:#E5E5E5; display:block; }
+@media (min-width:768px){ .visit .cta{ display:flex; flex-wrap:wrap; } .map{ height:380px; } }
+@media (min-width:1000px){ .visit-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
+
+/* 푸터 */
+.foot{ background:var(--paper2); border-top:1px solid var(--line); padding:52px 0 120px; font-size:.9rem; color:var(--soft); }
+.foot img{ width:150px; }
+.foot p{ margin-top:14px; }
+.foot p + p{ margin-top:6px; }
+.foot a{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+@media (min-width:900px){ .foot{ padding-bottom:52px; } }
+
+/* 하단 바: 네이버 플레이스 · 인스타그램(휴무 공지) · 전화 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:#FFFFFF; border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); border-radius:var(--r); font-size:.86rem; font-weight:600; text-decoration:none; text-align:center; }
+.quick a.ink{ background:var(--ink); color:#FFFFFF; }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 나타나기 (모션 강제 재생 · 다올 방침) */
+.js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .8s ease var(--d,0s), transform .8s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="텀 커피하우스 처음으로"><img src="tm-logo.svg" alt="Tum Coffee house" width="104" height="48" /></a>
+    <nav class="nav" aria-label="섹션">
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#space">공간</a>
+      <a href="#terumi">터미</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="btn ink" href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#about">소개</a>
+    <a href="#menu">메뉴</a>
+    <a href="#space">공간</a>
+    <a href="#terumi">터미</a>
+    <a href="#visit">오시는 길</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <img class="hero-logo reveal" src="tm-logo.svg" alt="Tum Coffee house" width="426" height="197" />
+        <h1 class="reveal">혼자 와도,<br />둘이 와도 좋아요</h1>
+        <p class="sub reveal">합정역 2번 출구에서 <span class="nw">371m</span>, 하얀색 대문 안 작은 커피하우스</p>
+        <ul class="facts reveal">
+          <li><b>화요일 - 일요일</b> <span class="nw">12:00 - 20:00</span></li>
+          <li><b>월요일</b> 정기 휴무</li>
+        </ul>
+        <div class="cta3 reveal">
+          <a class="btn ink" href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a>
+          <a class="btn" href="https://www.instagram.com/tumcoffeehouse/" target="_blank" rel="noopener">인스타그램</a>
+          <a class="btn" href="tel:050713675808">전화 <span class="nw">0507-1367-5808</span></a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="tm-hero.webp" alt="유리 통창으로 된 텀 커피하우스 입구, 문이 활짝 열려 있다" width="1440" height="1080" fetchpriority="high" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec alt" id="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="quote">
+        <span class="label reveal">01 소개</span>
+        <h2 id="about-h" class="reveal">통창 너머로 계절의 변화를<br />함께 즐겨보세요</h2>
+        <div class="reveal" style="margin-top:26px">
+          <p>방문해주시는 분들께서 제주도 같다고 자주 말씀해주시는데요, 사실 저희도 제주를 무척 좋아해요.</p>
+          <p>계절마다 달라지는 꽃들과 함께 커피 한 잔 하러 오세요.</p>
+          <span class="from">텀 주인장</span>
+        </div>
+      </div>
+      <div class="duo reveal">
+        <figure><img src="tm-bar.webp" alt="하늘색 펜던트 조명 아래 원목 테이블과 커피 바" width="1200" height="960" loading="lazy" /></figure>
+        <figure><img src="tm-flower.webp" alt="민트색 책장 위 유리컵에 꽂힌 꽃 한 송이" width="800" height="800" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <span class="label reveal">02 메뉴</span>
+      <h2 id="menu-h" class="reveal">커피와 메뉴</h2>
+      <p class="lead reveal">텀에서는 에이치커피로스터스의 원두를 사용하고 있습니다.</p>
+      <div class="beans">
+        <div class="bean reveal">
+          <b>레디쉬</b>
+          <p>포도와 자두의 달콤한 산미와 밀크초콜렛을 녹인듯한 부드러운 단맛, 복합적인 맛들이 어우러지며 여운이 참 좋습니다.</p>
+          <p class="tip">레디쉬 맛을 제대로 느끼고 싶다면 따뜻한 아메리카노로 드셔보시길 추천드립니다</p>
+        </div>
+        <div class="bean reveal">
+          <b>올리브</b>
+          <p>견과류와 알밤의 고소한 풍미가 좋고 산도가 낮으며, 묵직하면서도 부드러운 질감과 좋은 밸런스를 느끼실 수 있습니다.</p>
+          <p class="tip">우유로 마셨을 때 부드럽고 고소한 풍미가 한층 살아나, 매일 부담 없이 즐기기 좋은 커피를 찾으신다면 추천드려요!</p>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <article class="item reveal">
+          <figure><img src="tm-panini.webp" alt="그릴 자국이 난 파니니와 아이스 라떼" width="800" height="1001" loading="lazy" /></figure>
+          <h3>매콤 당근 파니니</h3>
+          <p>매콤하고 고소한 소스에 버무린 당근과 햄, 치즈, 로메인이 들어갑니다.</p>
+        </article>
+        <article class="item reveal">
+          <figure><img src="tm-cappuccino.webp" alt="코코아 파우더 위에 라떼아트를 올린 카푸치노" width="640" height="800" loading="lazy" /></figure>
+          <h3>호주식 카푸치노</h3>
+          <p>텀에서는 코코아 파우더가 올라가는 호주식 카푸치노로 준비해 드립니다.</p>
+          <small>메뉴판에는 없지만 종종 찾아주시는 카푸치노</small>
+        </article>
+        <article class="item reveal">
+          <figure><img src="tm-ube.webp" alt="보라색 우베 크림이 층을 이룬 음료" width="800" height="1001" loading="lazy" /></figure>
+          <h3>우베 라떼 · 우베 코코넛</h3>
+          <p>텀에서는 코코넛 워터 위에 우베 크림이 올라간 우베 코코넛, 찐한 보라색을 느낄 수 있는 우베 라떼 두 가지 버전으로 만나 볼 수 있습니다!</p>
+        </article>
+        <article class="item reveal">
+          <figure><img src="tm-pastry.webp" alt="결이 겹겹이 살아 있는 구움과자" width="800" height="1000" loading="lazy" /></figure>
+          <h3>핀아망</h3>
+          <p>핀아망은 칼로 잘라서 먹어도 물론! 맛있지만, 손으로 결대로 찢어서 드시는 걸 추천드리고 있어요.</p>
+        </article>
+        <article class="item reveal">
+          <figure><img src="tm-yogurt.webp" alt="블루베리를 올린 요거트와 크래커" width="800" height="1000" loading="lazy" /></figure>
+          <h3>블루베리요거트</h3>
+          <p>같이 제공되는 크래커에 스프레드를 듬뿍 찍어서 드시면 되는 달콤상콤한 메뉴에요!</p>
+        </article>
+      </div>
+
+      <ul class="more reveal">
+        <li><b>수제 콜라</b><span>수제 콜라는 시나몬스틱, 정향, 카다멈 등을 넣고 푹 끓여 시럽을 만듭니다. 바닐라 아이스크림 한 스쿱이 들어가 녹을수록 부드러워져요</span></li>
+        <li><b>말차라떼</b><span>텀의 말차라떼는 오트우유로 변경이 가능합니다!</span></li>
+      </ul>
+      <p class="menu-note reveal">계절 메뉴와 가격은 <a href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a>와 <a href="https://www.instagram.com/tumcoffeehouse/" target="_blank" rel="noopener">인스타그램</a>에서 확인해 주세요.</p>
+    </div>
+  </section>
+
+  <section class="sec space" id="space" aria-labelledby="space-h">
+    <div class="wrap">
+      <span class="label reveal">03 공간</span>
+      <h2 id="space-h" class="reveal">정원이 보이는 통창과 야외 좌석</h2>
+      <div class="gallery reveal">
+        <figure class="tall"><img src="tm-garden.webp" alt="작은 정원 앞 콘크리트 바닥에 놓인 원목 스툴과 테이블" width="640" height="1136" loading="lazy" /><figcaption>야외 좌석</figcaption></figure>
+        <figure><img src="tm-window.webp" alt="통창 너머로 보이는 정원" width="900" height="1198" loading="lazy" /><figcaption>통창</figcaption></figure>
+        <figure><img src="tm-house.webp" alt="파란 하늘 아래 연한 민트빛 건물 외벽" width="900" height="1200" loading="lazy" /><figcaption>외관</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="terumi" aria-labelledby="terumi-h">
+    <div class="wrap">
+      <span class="label reveal">04 터미</span>
+      <h2 id="terumi-h" class="reveal">텀에는 터미가 있어요</h2>
+      <p class="lead reveal">터미를 예뻐해주시는 많은 분들께 항상 감사드립니다.</p>
+      <div class="dog-grid reveal">
+        <figure class="wide"><img src="tm-terumi1.webp" alt="통창 옆 스툴 위에서 낮잠 자는 터미" width="1000" height="750" loading="lazy" /></figure>
+        <figure><img src="tm-terumi2.webp" alt="분홍 스카프를 두르고 스툴 위에 앉은 터미" width="800" height="800" loading="lazy" /></figure>
+        <figure><img src="tm-terumi3.webp" alt="입구 앞 스툴 위에 선 터미" width="800" height="1000" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <span class="label reveal">05 오시는 길</span>
+      <h2 id="visit-h" class="reveal">하얀색 대문 안으로<br />들어오시면 됩니다</h2>
+      <div class="visit-grid">
+        <div class="reveal">
+          <dl class="info">
+            <div><dt>주소</dt><dd>서울 마포구 월드컵북로1길 74 1층<small>합정역 2번 출구에서 <span class="nw">371m</span></small></dd></div>
+            <div><dt>찾아가는 길</dt><dd>하얀색 대문 안으로 들어오시면 됩니다.</dd></div>
+            <div><dt>영업</dt><dd>화요일 - 일요일 <span class="nw">12:00 - 20:00</span><small>월요일 정기 휴무. 추가 휴무일은 공지됩니다</small></dd></div>
+            <div><dt>전화</dt><dd><a href="tel:050713675808" class="nw">0507-1367-5808</a></dd></div>
+          </dl>
+          <div class="notice">
+            <p>추가 휴무일은 인스타그램에 먼저 공지돼요. 방문 전에 한 번 확인해 주세요.</p>
+            <a class="btn" href="https://www.instagram.com/tumcoffeehouse/" target="_blank" rel="noopener">인스타그램 공지 보기</a>
+          </div>
+          <div class="cta">
+            <a class="btn ink" href="https://map.naver.com/p/entry/place/2036517829" target="_blank" rel="noopener">네이버 길찾기</a>
+            <a class="btn" href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a>
+            <a class="btn" href="tel:050713675808">전화</a>
+          </div>
+        </div>
+        <iframe class="map reveal" title="텀 커피하우스 위치 지도" src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C1%EA%B8%B8%2074&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="tm-logo.svg" alt="" width="150" height="69" loading="lazy" />
+    <p>텀 커피하우스 · 서울 마포구 월드컵북로1길 74 1층 · <a href="tel:050713675808" class="nw">0507-1367-5808</a></p>
+    <p><a href="https://www.instagram.com/tumcoffeehouse/" target="_blank" rel="noopener">@tumcoffeehouse</a> · <a href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a></p>
+    <p>© Tum Coffee house</p>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="ink" href="https://m.place.naver.com/restaurant/2036517829/home" target="_blank" rel="noopener">네이버 플레이스</a>
+  <a href="https://www.instagram.com/tumcoffeehouse/" target="_blank" rel="noopener">휴무 공지</a>
+  <a href="tel:050713675808">전화</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1 && !el.style.getPropertyValue('--d')){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),4)*0.06)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  function start(){
+    var t=setInterval(function(){
+      if(!pending.length){ clearInterval(t); return; }
+      if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+      var line=window.innerHeight*0.92;
+      pending=pending.filter(function(el){
+        if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+        return true;
+      });
+    },120);
+  }
+  var started=false; function go(){ if(started) return; started=true; start(); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
+  setTimeout(go,1200);
+  setTimeout(function(){ document.querySelectorAll('.hero .reveal').forEach(function(el){ el.classList.add('in'); }); },1600);
+})();
+</script>
+</body>
+</html>
