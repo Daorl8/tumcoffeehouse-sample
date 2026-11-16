@@ -1,4 +1,4 @@
-# STRUCTURE · tumcoffeehouse-sample (v0.1 · 배포 예정 tumcoffeehouse-sample.lgt3232.workers.dev · 레포 이름은 다올이 정함)
+# STRUCTURE · tumcoffeehouse-sample (v0.1.3 · 배포 tumcoffeehouse-sample.lgt3232.workers.dev · 레포 github.com/Daorl8/tumcoffeehouse-sample)
 
 ```
 tumcoffeehouse-sample/
